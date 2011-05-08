@@ -32,9 +32,10 @@ def generate_proto(source):
   .proto file.  Does nothing if the output already exists and is newer than
   the input."""
 
-  output = source.replace(".proto", "_pb2.py").replace("../src/", "")
+  source = source.replace("../src/", "")
+  output = source.replace(".proto", "_pb2.py")
 
-  if not os.path.exists(source):
+  if not os.path.exists(output) and not os.path.exists(source):
     print "Can't find required file: " + source
     sys.exit(-1)
 
@@ -49,7 +50,7 @@ def generate_proto(source):
           "or install the binary package.\n")
       sys.exit(-1)
 
-    protoc_command = [ protoc, "-I../src", "-I.", "--python_out=.", source ]
+    protoc_command = [ protoc, "-I.", "--python_out=.", source ]
     if subprocess.call(protoc_command) != 0:
       sys.exit(-1)
 
@@ -95,7 +96,7 @@ if __name__ == '__main__':
     for (dirpath, dirnames, filenames) in os.walk("."):
       for filename in filenames:
         filepath = os.path.join(dirpath, filename)
-        if filepath.endswith("_pb2.py") or filepath.endswith(".pyc") or \
+        if filepath.endswith(".pyc") or \
           filepath.endswith(".so") or filepath.endswith(".o"):
           os.remove(filepath)
   else:

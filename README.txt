@@ -3,6 +3,10 @@ Copyright 2008 Google Inc.
 
 This directory contains the Python Protocol Buffers runtime library.
 
+This Python package adapts the normal protobuf directory structure to match
+the one distutils expects, keeping files that would normally be generated
+(and cleaned) by the build process.
+
 Normally, this directory comes as part of the protobuf package, available
 from:
 
