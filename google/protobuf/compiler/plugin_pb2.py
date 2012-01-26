@@ -7,6 +7,8 @@ from google.protobuf import descriptor_pb2
 # @@protoc_insertion_point(imports)
 
 
+import google.protobuf.descriptor_pb2
+
 DESCRIPTOR = descriptor.FileDescriptor(
   name='google/protobuf/compiler/plugin.proto',
   package='google.protobuf.compiler',
@@ -132,11 +134,11 @@ _CODEGENERATORRESPONSE = descriptor.Descriptor(
   serialized_end=399,
 )
 
-import google.protobuf.descriptor_pb2
-
 _CODEGENERATORREQUEST.fields_by_name['proto_file'].message_type = google.protobuf.descriptor_pb2._FILEDESCRIPTORPROTO
 _CODEGENERATORRESPONSE_FILE.containing_type = _CODEGENERATORRESPONSE;
 _CODEGENERATORRESPONSE.fields_by_name['file'].message_type = _CODEGENERATORRESPONSE_FILE
+DESCRIPTOR.message_types_by_name['CodeGeneratorRequest'] = _CODEGENERATORREQUEST
+DESCRIPTOR.message_types_by_name['CodeGeneratorResponse'] = _CODEGENERATORRESPONSE
 
 class CodeGeneratorRequest(message.Message):
   __metaclass__ = reflection.GeneratedProtocolMessageType

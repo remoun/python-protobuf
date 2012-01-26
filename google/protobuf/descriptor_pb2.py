@@ -6,6 +6,7 @@ from google.protobuf import reflection
 # @@protoc_insertion_point(imports)
 
 
+
 DESCRIPTOR = descriptor.FileDescriptor(
   name='google/protobuf/descriptor.proto',
   package='google.protobuf',
@@ -1105,7 +1106,6 @@ _SOURCECODEINFO = descriptor.Descriptor(
   serialized_end=3897,
 )
 
-
 _FILEDESCRIPTORSET.fields_by_name['file'].message_type = _FILEDESCRIPTORPROTO
 _FILEDESCRIPTORPROTO.fields_by_name['message_type'].message_type = _DESCRIPTORPROTO
 _FILEDESCRIPTORPROTO.fields_by_name['enum_type'].message_type = _ENUMDESCRIPTORPROTO
@@ -1146,6 +1146,23 @@ _UNINTERPRETEDOPTION_NAMEPART.containing_type = _UNINTERPRETEDOPTION;
 _UNINTERPRETEDOPTION.fields_by_name['name'].message_type = _UNINTERPRETEDOPTION_NAMEPART
 _SOURCECODEINFO_LOCATION.containing_type = _SOURCECODEINFO;
 _SOURCECODEINFO.fields_by_name['location'].message_type = _SOURCECODEINFO_LOCATION
+DESCRIPTOR.message_types_by_name['FileDescriptorSet'] = _FILEDESCRIPTORSET
+DESCRIPTOR.message_types_by_name['FileDescriptorProto'] = _FILEDESCRIPTORPROTO
+DESCRIPTOR.message_types_by_name['DescriptorProto'] = _DESCRIPTORPROTO
+DESCRIPTOR.message_types_by_name['FieldDescriptorProto'] = _FIELDDESCRIPTORPROTO
+DESCRIPTOR.message_types_by_name['EnumDescriptorProto'] = _ENUMDESCRIPTORPROTO
+DESCRIPTOR.message_types_by_name['EnumValueDescriptorProto'] = _ENUMVALUEDESCRIPTORPROTO
+DESCRIPTOR.message_types_by_name['ServiceDescriptorProto'] = _SERVICEDESCRIPTORPROTO
+DESCRIPTOR.message_types_by_name['MethodDescriptorProto'] = _METHODDESCRIPTORPROTO
+DESCRIPTOR.message_types_by_name['FileOptions'] = _FILEOPTIONS
+DESCRIPTOR.message_types_by_name['MessageOptions'] = _MESSAGEOPTIONS
+DESCRIPTOR.message_types_by_name['FieldOptions'] = _FIELDOPTIONS
+DESCRIPTOR.message_types_by_name['EnumOptions'] = _ENUMOPTIONS
+DESCRIPTOR.message_types_by_name['EnumValueOptions'] = _ENUMVALUEOPTIONS
+DESCRIPTOR.message_types_by_name['ServiceOptions'] = _SERVICEOPTIONS
+DESCRIPTOR.message_types_by_name['MethodOptions'] = _METHODOPTIONS
+DESCRIPTOR.message_types_by_name['UninterpretedOption'] = _UNINTERPRETEDOPTION
+DESCRIPTOR.message_types_by_name['SourceCodeInfo'] = _SOURCECODEINFO
 
 class FileDescriptorSet(message.Message):
   __metaclass__ = reflection.GeneratedProtocolMessageType
